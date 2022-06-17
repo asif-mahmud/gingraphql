@@ -25,3 +25,13 @@ go get -u github.com/asif-mahmud/gingraphql
 
 godoc: [https://pkg.go.dev/github.com/asif-mahmud/gingraphql](https://pkg.go.dev/github.com/asif-mahmud/gingraphql)
 examples: [https://pkg.go.dev/github.com/asif-mahmud/gingraphql#pkg-examples](https://pkg.go.dev/github.com/asif-mahmud/gingraphql#pkg-examples)
+
+### Version history
+
+#### Version 1.0.0
+
+Stable version release
+
+#### Version 0.9.0
+
+A clone of the original package [https://pkg.go.dev/github.com/asif-mahmud/graphqlgin](https://pkg.go.dev/github.com/asif-mahmud/graphqlgin) to fix versioning.
