@@ -28,6 +28,12 @@ examples: [https://pkg.go.dev/github.com/asif-mahmud/gingraphql#pkg-examples](ht
 
 ### Version history
 
+#### Version 1.0.2
+
+- Updated go and package versions
+- Fixed github workflow
+- Fixed package name issue
+
 #### Version 1.0.0
 
 Stable version release
