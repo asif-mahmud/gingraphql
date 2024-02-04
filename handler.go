@@ -1,6 +1,5 @@
-// +build: linux
-// +build: windows
-// +build: darwin
+//go:build linux || windows || darwin
+
 package gingraphql
 
 import (
