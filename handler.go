@@ -1,4 +1,4 @@
-package graphqlgin
+package gingraphql
 
 import (
 	"context"
@@ -38,8 +38,8 @@ func GetGinContext(ctx context.Context) *gin.Context {
 
 // Basic GraphQL request parameters
 type GraphQLRequestParams struct {
-	RequestString  string                 `json:"query" form:"query"`
-	VariableValues map[string]interface{} `json:"variables" form:"variables"`
+	RequestString  string                 `json:"query"         form:"query"`
+	VariableValues map[string]interface{} `json:"variables"     form:"variables"`
 	OperationName  string                 `json:"operationName" form:"operationName"`
 }
 

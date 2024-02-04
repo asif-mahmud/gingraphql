@@ -1,4 +1,4 @@
-package graphqlgin
+package gingraphql
 
 import (
 	"bytes"
@@ -438,7 +438,11 @@ func TestSingleFileUploadPOST(t *testing.T) {
 		t.Errorf("Response unmarshal failed. Err: %v", err)
 	}
 	if res.Data.Mutation.Filename != "hello.txt" {
-		t.Errorf("File name incorrect. expected %s found %s", "hello.txt", res.Data.Mutation.Filename)
+		t.Errorf(
+			"File name incorrect. expected %s found %s",
+			"hello.txt",
+			res.Data.Mutation.Filename,
+		)
 	}
 	if res.Data.Mutation.Size != 12 {
 		t.Errorf("File size incorrect. expected %d found %d", 12, res.Data.Mutation.Size)
@@ -496,13 +500,21 @@ func TestMultipleFileUploadPOST(t *testing.T) {
 		t.Errorf("Response unmarshal failed. Err: %v", err)
 	}
 	if res.Data.Mutation[0].Filename != "hello.txt" {
-		t.Errorf("File name incorrect. expected %s found %s", "hello.txt", res.Data.Mutation[0].Filename)
+		t.Errorf(
+			"File name incorrect. expected %s found %s",
+			"hello.txt",
+			res.Data.Mutation[0].Filename,
+		)
 	}
 	if res.Data.Mutation[0].Size != 12 {
 		t.Errorf("File size incorrect. expected %d found %d", 12, res.Data.Mutation[0].Size)
 	}
 	if res.Data.Mutation[1].Filename != "bingo.txt" {
-		t.Errorf("File name incorrect. expected %s found %s", "bingo.txt", res.Data.Mutation[1].Filename)
+		t.Errorf(
+			"File name incorrect. expected %s found %s",
+			"bingo.txt",
+			res.Data.Mutation[1].Filename,
+		)
 	}
 	if res.Data.Mutation[1].Size != 5 {
 		t.Errorf("File size incorrect. expected %d found %d", 5, res.Data.Mutation[1].Size)
@@ -563,7 +575,11 @@ func TestSingleFileAndValuePOST(t *testing.T) {
 		t.Errorf("Response unmarshal failed. Err: %v", err)
 	}
 	if res.Data.Mutation.File.Filename != "hello.txt" {
-		t.Errorf("File name incorrect. expected %s found %s", "hello.txt", res.Data.Mutation.File.Filename)
+		t.Errorf(
+			"File name incorrect. expected %s found %s",
+			"hello.txt",
+			res.Data.Mutation.File.Filename,
+		)
 	}
 	if res.Data.Mutation.File.Size != 12 {
 		t.Errorf("File size incorrect. expected %d found %d", 12, res.Data.Mutation.File.Size)
@@ -846,7 +862,9 @@ func ExampleGraphQLApp_add_custom_headers() {
 	req, _ := http.NewRequest(
 		"POST",
 		"/graphql",
-		bytes.NewBuffer([]byte(`{"query": "query { header }", "operationName": "", "variables": {}}`)),
+		bytes.NewBuffer(
+			[]byte(`{"query": "query { header }", "operationName": "", "variables": {}}`),
+		),
 	)
 	req.Header.Add("Content-Type", "application/json")
 	w := httptest.NewRecorder()
@@ -931,7 +949,11 @@ func ExampleGraphQLApp_context_usage() {
 	req, _ := http.NewRequest(
 		"POST",
 		"/graphql",
-		bytes.NewBuffer([]byte(`{"query": "query { users { name email } }", "operationName": "", "variables": {}}`)),
+		bytes.NewBuffer(
+			[]byte(
+				`{"query": "query { users { name email } }", "operationName": "", "variables": {}}`,
+			),
+		),
 	)
 	req.Header.Add("Content-Type", "application/json")
 	w := httptest.NewRecorder()

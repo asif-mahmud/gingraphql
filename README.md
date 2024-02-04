@@ -1,5 +1,5 @@
 ## GraphQL handler for gin
-![go workflow](https://github.com/asif-mahmud/graphqlgin/actions/workflows/go.yml/badge.svg)
+![go workflow](https://github.com/asif-mahmud/gingraphql/actions/workflows/go.yml/badge.svg)
 
 This is a small package to provide a [GraphQL](https://graphql.org/) handler that can be used with
 [Gin Framework](https://github.com/gin-gonic/gin).
