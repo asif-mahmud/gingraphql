@@ -888,11 +888,11 @@ func ExampleGraphQLApp_add_custom_headers() {
 func ExampleGraphQLApp_context_usage() {
 	// Your example database
 	userStore := []map[string]interface{}{
-		map[string]interface{}{
+		{
 			"name":  "John",
 			"email": "a@b.c",
 		},
-		map[string]interface{}{
+		{
 			"name":  "Kratos",
 			"email": "c@b.a",
 		},
